@@ -392,7 +392,11 @@ module.exports =
 
 
     dts = fs.readFileSync(path.join(__dirname, 'entitas.d.ts'), 'utf8')
-    dts = def(dts, '    interface IComponent {\n    }', d0)
+    #---@offcial---
+    # dts = def(dts, '    interface IComponent {\n    }', d0)
+    #---@Fox---
+    dts = 'declare module entitas {\n' +d0.join('\n') + '\n}\n' + dts
+    #------ 
     dts = def(dts, '    class Entity {', d1)
     dts = def(dts, '    class Matcher implements IAllOfMatcher, IAnyOfMatcher, INoneOfMatcher {', d2)
     dts = def(dts, '    class Pool {', d3)
