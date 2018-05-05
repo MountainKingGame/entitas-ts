@@ -5,6 +5,12 @@
     "args": ["run"],
     "tasks": [
         {
+            "taskName": "tsc_generator",
+            "args": [],
+            "isBuildCommand": true,
+            "problemMatcher": []
+        },
+        {
             "taskName": "_vscode_build",
             "args": [],
             "isBuildCommand": true,
@@ -54,7 +60,7 @@
             "isBuildCommand": false,
             "problemMatcher": []
         },{
-            "taskName": "test",
+            "taskName": "test1",
             "args": [],
             "isBuildCommand": false,
             "problemMatcher": []

@@ -8,6 +8,7 @@
   },
   "config": {},
   "scripts": {
+    "tsc_generator": "tsc -p ./tsconfig.generator.json -watch",
     "_vscode_build": "bin/entitas generate && tsc -p ./tsconfig_entitas.json && tsc -p ./tsconfig_example.json",
     "build": "tsc --outFile build/entitas.js && cat build/entitas.js | java -jar packages/closure-compiler/lib/vendor/compiler.jar --compilation_level WHITESPACE_ONLY --js_output_file build/entitas.min.js",
     "build_es6": "tsc && cat build/entitas.js | java -jar /home/bruce/Applications/closure-compiler/compiler-latest/closure-compiler-v20160822.jar --compilation_level WHITESPACE_ONLY --js_output_file build/entitas.min.js",
@@ -38,6 +39,7 @@
     "walker": "^1.0.7"
   },
   "dependencies": {
+    "ejs": "^2.5.8",
     "liquid.coffee": "^0.1.8",
     "mkdirp": "^0.5.1"
   }

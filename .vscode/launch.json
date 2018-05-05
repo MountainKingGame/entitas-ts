@@ -4,6 +4,13 @@
 	// ONLY "node" and "mono" are supported, change "type" to switch.
 	"configurations": [
 		{
+			"type": "node",
+			"name": "generator",
+			"program": "${workspaceFolder}/lib/cli/generators/generator.js",
+			"cwd": "${workspaceRoot}",
+			"request": "launch"
+		},
+		{
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch Web Server",
 			// Type of configuration. Possible values: "node", "mono".
